@@ -1,51 +1,83 @@
 <script>
 
+export default {
+  data() {
+      return {
+        activeIndex: '1',
+        activeIndex2: '1'
+      };
+    },
+    methods: {
+      handleSelect(key, keyPath) {
+        console.log(key, keyPath);
+              
+          //  if(key===1){
+          //   console.log(' Courses Learning ')
+          //  }
+          //   if (key===1){
+          //   console.log('Courses')
+          //  }
+
+      
+      }
+    }
+    
+
+    
+  }
+
 
 </script>
 
 <template>
   <div id="app">
-
     <div class="p-10">
-      <p>DashBord /  Learing</p>
+      <p>DashBord / course</p>
     </div>
     <section>
-    <div class="flex flex-row gap-10  p-10  pb-1  font-semibold border-y">
-      
-      <div class="a">
-        <router-link to='/'>
-          Learning Portal Overview</router-link>
-      </div>
-      <div class="a">
+      <el-menu
+        :default-active="activeIndex"
+        class="el-menu-demo"
+        mode="horizontal"
+        @select="handleSelect"
+      >
+        <el-menu-item index="1">
+          <div class="a font-bold">
+            <router-link to="/" > Learning Portal Overview</router-link>
+          </div>
+        </el-menu-item>
 
-        <router-link to='/Course'>
-          Courses</router-link>
-      </div>
-      <div class="a">
+        <el-menu-item index="2">
+          <div class="a font-bold">
+            <router-link to="/Course"> Courses</router-link>
+          </div>
+        </el-menu-item>
 
-        <router-link to='/builder'>
-          Email Template Builder</router-link>
-      </div>
+        <el-menu-item index="3">
+          <div class="a font-bold">
+            <router-link to="/builder"> Email Template Builder</router-link>
+          </div>
+        </el-menu-item>
+      </el-menu>
 
-    </div>
-  </section>
+    </section>
 
-  <router-view />
+    <router-view />
   </div>
-  
-
 </template>
 
-
 <style scoped>
+.a:hover {
+  color: #4d74b1;
+}
+.a {
+    font-size: 0.9em;
+  }
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  .a{
+  .a {
     font-size: 0.7em;
   }
 }
-
-
-
 </style>

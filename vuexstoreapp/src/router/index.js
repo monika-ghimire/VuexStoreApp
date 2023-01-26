@@ -2,10 +2,8 @@
 
 import vueRouter from "vue-router";
 import Vue from "vue";
-// import Courses from '../component/courSes.vue';
-import  Viewes from '../component/overView.vue';
-import builDer from'../component/builDer.vue';
-
+import  Viewes from '../pages/OverView.vue';
+import builDer from'../pages/builDer.vue';
 import Course from "../pages/CouRse.vue";
 
 const routes=[
