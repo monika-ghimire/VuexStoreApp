@@ -2,9 +2,11 @@
 
 import vueRouter from "vue-router";
 import Vue from "vue";
-import Courses from '../component/courSes.vue';
+// import Courses from '../component/courSes.vue';
 import  Viewes from '../component/overView.vue';
 import builDer from'../component/builDer.vue';
+
+import Course from "../pages/CouRse.vue";
 
 const routes=[
     {
@@ -16,7 +18,7 @@ const routes=[
     {
         path:'/course',
         name:'course',
-        component:Courses
+        component:Course 
     },
     {
         path:'/builder',
