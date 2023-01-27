@@ -60,7 +60,7 @@
             <span>{{ i.rate_out_of }}</span>
             <br />
             <el-progress
-              :percentage="`${i.percentage}`"
+              :percentage="parseInt(i.percentage)"
               :show-text="false"
             ></el-progress>
           </label>

@@ -27,8 +27,8 @@ export default {
               <span>{{ i.new_title }}</span>
               <span class="float-right">{{ i.date }}</span>
 
-              <div class="flex flex-row w-full pt-8">
-                <div><img src="../../../assets/card1.jpg" /></div>
+              <div class="flex flex-row w-full pt-8 " >
+                <div><img :src="i.img"  class="image"/></div>
 
                 <div class="mt-4">
                   <div>
@@ -73,7 +73,11 @@ export default {
 }
 .boder {
   border: 1px solid gainsboro;
-  height: 500px;
+  height:auto;
+  padding-bottom: 5%;
+}
+.image  {
+ max-width:90px;
 }
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
